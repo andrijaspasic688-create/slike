@@ -1,0 +1,144 @@
+/* Osnovna podešavanja */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigacija */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: #2c3e50; /* Tamno plava boja sa tvoje slike */
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
+}
+
+/* HERO SEKCIJA - Ovde popravljamo sivu pozadinu */
+.hero-section {
+    height: 100vh;
+    /* Slika planine/gradova u pozadini */
+    background: url('https://images.unsplash.com/photo-1599831032128-090956942621?q=80&w=1920') no-repeat center center/cover !important;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tamni filter preko slike da bi se tekst bolje video */
+.hero-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-text {
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+/* Narandžasto dugme */
+.hero-btn {
+    background-color: #e67e22;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background-color: #d35400;
+}
+
+/* SEKCIJE I KARTICE */
+section {
+    padding: 80px 8%;
+}
+
+.alt-bg {
+    background-color: #f1f3f5; /* Svetlo siva za naizmenične sekcije */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+}
+
+/* Narandžasta podvlaka ispod naslova */
+h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #e67e22;
+    margin: 10px auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Dizajn bele kartice sa narandžastim vrhom */
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-top: 5px solid #e67e22; /* Narandžasta linija na vrhu kartice */
+    text-align: center;
+    padding-bottom: 25px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Slika unutar kartice - veoma bitno */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Slika će uvek lepo popuniti prostor bez razvlačenja */
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+}
+
+.card p {
+    color: #666;
+    padding: 0 15px;
+    font-size: 0.95rem;
+}
