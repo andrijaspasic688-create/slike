@@ -34,7 +34,7 @@ nav {
 /* HERO SEKCIJA - Ovde popravljamo sivu pozadinu */
 .hero-section {
     height: 100vh;
-    /* Slika planine/gradova u pozadini */
+    /* https://www.serbia.com/wp-content/uploads/2016/01/11009579154_1b832c3378_o.jpg */
     background: url('https://images.unsplash.com/photo-1599831032128-090956942621?q=80&w=1920') no-repeat center center/cover !important;
     position: relative;
     display: flex;
