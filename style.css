@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navigacija */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: #2c3e50;
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1599831032128-090956942621?q=80&w=1920') no-repeat center center/cover;
+    position: relative;
+}
+
+.hero-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-text h1 { font-size: 3rem; margin-bottom: 10px; }
+.hero-text p { font-size: 1.2rem; margin-bottom: 25px; }
+
+.hero-btn {
+    background: #e67e22;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Sekcije i Naslovi */
+section { padding: 60px 8%; }
+.alt-bg { background-color: #f1f3f5; }
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 2px;
+    background: #e67e22;
+    margin: 10px auto;
+}
+
+/* Grid i Kartice - IZGLED SA SLIKE */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0 0 25px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-top: 5px solid #e67e22; /* Narandžasta linija sa slike */
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #666;
+    padding: 0 20px;
+    margin-bottom: 15px;
+}
+
+.card small {
+    display: block;
+    padding: 0 20px;
+    font-size: 0.85rem;
+    color: #888;
+    line-height: 1.4;
+}
+
+/* Kontakt Forma */
+#kontakt { text-align: center; background: #fff; }
+#contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
